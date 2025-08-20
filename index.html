@@ -19,7 +19,7 @@
 	</head>
 	<body>
 		<header class="header">
-			<div class="container nav">
+			<div class="nav">
 				<a class="brand" href="https://dziennik29.pl/"
 					><img src="./src/whitelogo2.png" alt="Dziennik 29"
 				/></a>
@@ -46,20 +46,34 @@
 						</div>
 					</div>
 				</div>
-				<div id="result" class="result"></div>
 			</div>
-			<div class="container center paddingTop" style="display: none">
+			<div class="container center"><div id="result" class="result"></div></div>
+			<div class="container center">
 				<div class="form-wrap">
-					<div id="">Czy chcesz zoabczyć podpowiedź?</div>
-					<button class="go" id="yesBtn" aria-label="Tak">Tak</button>
+					<button class="button" id="tipBtn" aria-label="Podpowiedź">Podpowiedź</button>
+					<button class="button" id="answerBtn" aria-label="Rozwiązanie">
+						Rozwiązanie
+					</button>
 				</div>
-				<div id="tip" class="result">asdasdasd</div>
-			</div>
-
-			<div class="container center paddingTop">
-				<h1>Strona zagadki:</h1>
-				<div class="pagination" id="pagination"></div>
 			</div>
 		</main>
+
+		<footer class="bottom-nav">
+			<div class="pagination" id="pagination"></div>
+		</footer>
+
+		<div class="modal" id="modal">
+			<div class="modal-content">
+				<div id="modalTitle" class="modal-title">
+					Czy na pewno chcesz skorzystać z podpowiedzi?
+				</div>
+				<div id="modalBody" class="modal-body">
+					<div class="form-wrap">
+						<button class="button" id="yesBtn" aria-label="Tak">Tak</button>
+						<button class="button" id="noBtn" aria-label="Nie">Nie</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>

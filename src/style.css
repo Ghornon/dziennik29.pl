@@ -27,9 +27,13 @@ a {
 	position: sticky;
 	top: 0;
 	z-index: 10;
-	background: rgba(243, 232, 209, 0.8);
+	background: var(--paper);
 	backdrop-filter: blur(6px);
 	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
 }
 .container {
 	max-width: var(--max);
@@ -37,16 +41,26 @@ a {
 	padding: 0 20px;
 }
 .nav {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
 	height: 64px;
 }
+.nav a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+	height: 100%;
+}
 .brand img {
-	height: 30px;
+	padding-top: 6px;
+	filter: invert(1);
 }
 .main {
-	padding: 56px 16px 64px;
+	padding: 54px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 16px;
 }
 .center {
 	text-align: center;
@@ -55,15 +69,24 @@ a {
 	font-family: 'Cormorant Garamond', serif;
 	font-weight: 700;
 	letter-spacing: 0.04em;
-	font-size: 44px;
 	line-height: 1;
 	margin: 0 0 6px;
+	padding: 16px 0;
+	text-wrap: balance;
 }
+
+.h2 {
+	font-family: 'Cormorant Garamond', serif;
+	font-weight: 700;
+	line-height: 1;
+}
+
 .form-wrap {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: 10px;
+	width: 100%;
 }
 .input-shell {
 	display: flex;
@@ -72,22 +95,24 @@ a {
 	border-radius: 10px;
 	overflow: hidden;
 	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
-	margin: 16px 0;
 }
+
 .input-box {
 	background: var(--ink);
 	display: flex;
 	align-items: center;
 }
+
 .input {
 	all: unset;
 	color: #e9eef2;
-	font-size: 22px;
 	letter-spacing: 0.08em;
 	text-align: center;
-	width: min(360px, 70vw);
+	width: min(200px, 70vw);
 	padding: 14px 18px;
+	font-size: 14px;
 }
+
 .sep {
 	width: 1px;
 	height: 28px;
@@ -107,17 +132,21 @@ a {
 	background: #0b0f12;
 }
 .result {
-	margin-top: 14px;
-	font-weight: 700;
 	letter-spacing: 0.04em;
 }
-
 .paddingTop {
-	padding-top: 50px;
+	padding-top: 30px;
+}
+
+.bottom-nav {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	padding: 16px 0;
 }
 
 .pagination {
-	display: inline-block;
 	margin: 0 auto;
 	max-width: 100%;
 	display: flex;
@@ -127,16 +156,161 @@ a {
 
 .pagination a {
 	color: black;
-	padding: 8px 16px;
+	width: 40px;
+	height: 40px;
 	text-decoration: none;
 	transition: background-color 0.3s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .pagination a.active {
-	background-color: #4caf50;
+	background: var(--ink-soft);
 	color: white;
 }
 
 .pagination a:hover:not(.active) {
-	background-color: #ddd;
+	background: var(--ink);
+	color: white;
+}
+
+.button {
+	all: unset;
+	text-decoration: none;
+	transition: background-color 0.3s;
+	transition: box-shadow 0.5s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: var(--ink-soft);
+	color: #fff;
+	padding: 10px 16px;
+	cursor: pointer;
+}
+
+.button:hover:not(.active) {
+	background: var(--ink);
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+}
+
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+	-webkit-animation-name: fadeIn; /* Fade in the background */
+	-webkit-animation-duration: 0.4s;
+	animation-name: fadeIn;
+	animation-duration: 0.4s;
+}
+
+/* Modal Content */
+.modal-content {
+	position: fixed;
+	bottom: 0;
+	background-color: #fefefe;
+	width: 100%;
+	-webkit-animation-name: slideIn;
+	-webkit-animation-duration: 0.4s;
+	animation-name: slideIn;
+	animation-duration: 0.4s;
+	text-align: center;
+	padding: 25px 50px;
+}
+
+.modal-title {
+	margin: 0;
+	font-size: 24px;
+	font-weight: bold;
+	color: var(--ink);
+	padding-bottom: 10px;
+}
+
+/* The Close Button */
+.close {
+	color: #000;
+	position: absolute;
+	top: 15px;
+	right: 25px;
+	font-size: 36px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+	from {
+		bottom: -300px;
+		opacity: 0;
+	}
+	to {
+		bottom: 0;
+		opacity: 1;
+	}
+}
+
+@keyframes slideIn {
+	from {
+		bottom: -300px;
+		opacity: 0;
+	}
+	to {
+		bottom: 0;
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@media (min-width: 600px) {
+	.main {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 0;
+	}
+	.input {
+		font-size: 22px;
+	}
+	.h1 {
+		font-size: 44px;
+	}
+	.input {
+		width: min(360px, 70vw);
+		font-size: 16px;
+	}
+	.modal-content {
+		padding: 60px 50px;
+	}
 }
