@@ -29,7 +29,7 @@ Dziennik29.pl — autorska wersja strony z hasłami, stworzona jako alternatywa 
 15. Odpowiedź: zsym Klucz: {syrena}
 16. Odpowiedź: atemok Klucz: {lot}
 17. Odpowiedź: sram Klucz: {dopalacz}
-18. Odpowiedź: ramzeb Klucz: {molekuła}
+18. Odpowiedź: raimzeb Klucz: {molekuła}
 19. Odpowiedź: 81 Klucz: {lustro}
 20. Odpowiedź: 865924553 Klucz: {port}
 21. Odpowiedź: azdeiw Klucz: {stos}

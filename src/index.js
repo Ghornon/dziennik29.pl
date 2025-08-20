@@ -17,7 +17,7 @@ const data = [
 	{ answer: 'zsym', key: 'syrena' },
 	{ answer: 'atemok', key: 'lot' },
 	{ answer: 'sram', key: 'dopalacz' },
-	{ answer: 'ramzeb', key: 'molekuła' },
+	{ answer: 'bezmiar', key: 'molekuła' },
 	{ answer: '81', key: 'lustro' },
 	{ answer: '865924553', key: 'port' },
 	{ answer: 'azdeiw', key: 'stos' },
