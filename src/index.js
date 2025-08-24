@@ -37,7 +37,7 @@ function updatePagination() {
 	paginationDiv.innerHTML = '';
 
 	const total = data.length;
-	const maxPages = 10;
+	const maxPages = 7;
 	let start = Math.max(0, currentPage - Math.floor(maxPages / 2));
 	let end = start + maxPages;
 
@@ -80,7 +80,6 @@ function updatePagination() {
 		}
 		paginationDiv.appendChild(button);
 	}
-
 	// Next button
 	const nextBtn = document.createElement('a');
 	nextBtn.href = `#${Math.min(total - 1, currentPage + 1)}`;
@@ -202,6 +201,28 @@ window.addEventListener('DOMContentLoaded', () => {
 		document.getElementById('noBtn').addEventListener('click', () => {
 			modal.close();
 		});
+	});
+
+	const gotoInput = document.getElementById('goToPageInput');
+
+	const gotoBtn = document.getElementById('goToPageButton');
+
+	gotoBtn.addEventListener('click', () => {
+		let val = parseInt(gotoInput.value, 10);
+		if (!isNaN(val)) {
+			val = Math.max(0, Math.min(data.length - 1, val));
+			setCurrentPage(val);
+		}
+	});
+
+	gotoInput.addEventListener('keydown', (e) => {
+		if (e.key === 'Enter') {
+			let val = parseInt(gotoInput.value, 10);
+			if (!isNaN(val)) {
+				val = Math.max(0, Math.min(data.length - 1, val));
+				setCurrentPage(val);
+			}
+		}
 	});
 
 	document.getElementById('answer').focus();

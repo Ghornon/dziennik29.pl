@@ -1,18 +1,11 @@
 <!DOCTYPE html>
-<!-- saved from url=(0024)https://dziennik29.pl/0/ -->
 <html lang="pl">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
 		<title>Dziennik 29 — Zagadka</title>
 		<meta name="description" content="Odpowiedź i klucz do zagadek w Dzienniku 29." />
-		<link rel="canonical" href="https://dziennik29.pl/" />
-		<link
-			rel="icon"
-			type="image/png"
-			href="https://dziennik29.pl/favicon-32x32.png"
-			sizes="32x32"
-		/>
+		<link rel="icon" type="image/png" href="./src/favicon-32x32.png" sizes="32x32" />
 		<link href="./src/fonts.css" rel="stylesheet" />
 		<link href="./src/style.css" rel="stylesheet" />
 		<script src="./src/data.js"></script>
@@ -21,10 +14,7 @@
 	<body>
 		<header class="header">
 			<div class="nav">
-				<a class="brand" href="https://dziennik29.pl/"
-					><img src="./src/whitelogo2.png" alt="Dziennik 29"
-				/></a>
-				<nav class="menu"></nav>
+				<a class="brand" href="/"><img src="./src/whitelogo2.png" alt="Dziennik 29" /></a>
 			</div>
 		</header>
 
@@ -60,6 +50,11 @@
 		</main>
 
 		<footer class="bottom-nav">
+			<div class="goToPage">
+				<label for="goToPageInput" class="goToPageLabel">Strona:</label>
+				<input type="number" min="0" max="63" id="goToPageInput" class="goToPageInput" />
+				<button class="goToPageButton" id="goToPageButton">Przejdź</button>
+			</div>
 			<div class="pagination" id="pagination"></div>
 		</footer>
 
