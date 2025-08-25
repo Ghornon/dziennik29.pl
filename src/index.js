@@ -108,6 +108,9 @@ function updateContent() {
 	if (titleElement) {
 		titleElement.innerHTML = `Odpowiedź do zagadki ${currentPage}`;
 	}
+
+	const gotoInput = document.getElementById('goToPageInput');
+	gotoInput.value = currentPage;
 }
 
 class Modal {
