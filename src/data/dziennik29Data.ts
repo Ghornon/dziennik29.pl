@@ -346,7 +346,7 @@ export const dziennik29Data = [
 			'Przytoczony fragment pochodzi z tekstu o czasie. To podpowiedź, aby czarne kreski przy lewej krawędzi słupa potraktować jako wskazówki zegarów.',
 	},
 	{
-		answer: '257679',
+		answer: '2576790',
 		key: 'chód',
 		tip: 'Litery już umiesz rozkodować, teraz pora na cyfry.',
 		answerDescription:
