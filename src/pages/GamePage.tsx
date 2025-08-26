@@ -8,7 +8,10 @@ import { useLocation } from 'react-router-dom';
 const GamePage = () => {
 	const [currentPage, setCurrentPage] = useState(0);
 	const [result, setResult] = useState('');
-	const keys = dziennik29Data;
+	const keys = dziennik29Data.map((item) => ({
+		...item,
+		error: item.error || '',
+	}));
 	const totalPages = keys.length;
 
 	const handlePageChange = (newPage: number) => {
