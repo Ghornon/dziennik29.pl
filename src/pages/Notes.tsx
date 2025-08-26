@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import notesImage from '../assets/notes.png';
 import notesPDF from '../assets/notes.pdf';
 

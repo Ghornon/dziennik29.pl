@@ -1,5 +1,3 @@
-import Footer from '../components/Footer';
-
 const Rozpadlina = () => {
 	return (
 		<div className="container center">

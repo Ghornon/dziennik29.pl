@@ -1,20 +1,16 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext } from 'react';
 import GameContext from '../context/GameContext';
 
 const Result = () => {
 	const { result } = useContext(GameContext);
 
-	const [resultClasses, setResultClasses] = useState('result');
+	let resultClasses = 'result';
 
-	useEffect(() => {
-		if (result === 'Błędna odpowiedź') {
-			setResultClasses('result incorrect');
-		} else if (result.startsWith('Poprawnie!')) {
-			setResultClasses('result correct');
-		} else {
-			setResultClasses('result');
-		}
-	}, [result]);
+	if (result === 'Błędna odpowiedź') {
+		resultClasses = 'result incorrect';
+	} else if (result.startsWith('Poprawnie!')) {
+		resultClasses = 'result correct';
+	}
 
 	return (
 		<div className="container center">

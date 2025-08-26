@@ -1,11 +1,15 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import GameContext from '../context/GameContext';
 import { useNavigate } from 'react-router';
 
 const GoToPage = () => {
-	const { totalPages, setCurrentPage } = useContext(GameContext);
-	const [goToPage, setGoToPage] = useState();
+	const { totalPages, currentPage, setCurrentPage } = useContext(GameContext);
+	const [goToPage, setGoToPage] = useState<number | string>();
 	const navigate = useNavigate();
+
+	useEffect(() => {
+		setGoToPage(currentPage);
+	}, [currentPage]);
 
 	return (
 		<div className="goToPage">
@@ -26,7 +30,7 @@ const GoToPage = () => {
 			<button
 				className="goToPageButton"
 				onClick={() => {
-					let val = parseInt(goToPage, 10);
+					let val = Number(goToPage);
 					if (!isNaN(val)) {
 						val = Math.max(0, Math.min(val, totalPages - 1));
 						setCurrentPage(val);
