@@ -1,4 +1,4 @@
-const data = [
+export const dziennik29Data = [
 	{
 		answer: '92',
 		key: 'brawo',

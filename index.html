@@ -1,75 +1,15 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/png" href="./src/assets/favicon-32x32.png" sizes="32x32" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Dziennik 29 — Zagadka</title>
-		<meta name="description" content="Odpowiedź i klucz do zagadek w Dzienniku 29." />
-		<link rel="icon" type="image/png" href="./src/favicon-32x32.png" sizes="32x32" />
-		<link href="./src/fonts.css" rel="stylesheet" />
-		<link href="./src/style.css" rel="stylesheet" />
-		<script src="./src/data.js"></script>
-		<script src="./src/index.js"></script>
+		<meta name="description" content="Odpowiedź i klucz do zagadek w Dzienniku 29" />
 	</head>
 	<body>
-		<header class="header">
-			<div class="nav">
-				<a class="brand" href="/"><img src="./src/whitelogo2.png" alt="Dziennik 29" /></a>
-			</div>
-		</header>
-
-		<main id="top" class="main">
-			<div class="container center" style="max-width: 780px">
-				<h1 class="h1" id="title">Odpowiedź do zagadki 0</h1>
-
-				<div class="form-wrap">
-					<div class="input-shell">
-						<div class="input-box">
-							<input
-								id="answer"
-								class="input"
-								type="text"
-								placeholder="Wpisz odpowiedź…"
-								autocomplete="off"
-							/>
-							<div class="sep"></div>
-							<button class="go" id="goBtn" aria-label="Sprawdź">›</button>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="container center"><div id="result" class="result"></div></div>
-			<div class="container center">
-				<div class="form-wrap">
-					<button class="button" id="tipBtn" aria-label="Podpowiedź">Podpowiedź</button>
-					<button class="button" id="answerBtn" aria-label="Rozwiązanie">
-						Rozwiązanie
-					</button>
-				</div>
-			</div>
-		</main>
-
-		<footer class="bottom-nav">
-			<div class="goToPage">
-				<label for="goToPageInput" class="goToPageLabel">Strona:</label>
-				<input type="number" min="0" max="63" id="goToPageInput" class="goToPageInput" />
-				<button class="goToPageButton" id="goToPageButton">Przejdź</button>
-			</div>
-			<div class="pagination" id="pagination"></div>
-		</footer>
-
-		<div class="modal" id="modal">
-			<div class="modal-content">
-				<div id="modalTitle" class="modal-title">
-					Czy na pewno chcesz skorzystać z podpowiedzi?
-				</div>
-				<div id="modalBody" class="modal-body">
-					<div class="form-wrap">
-						<button class="button" id="yesBtn" aria-label="Tak">Tak</button>
-						<button class="button" id="noBtn" aria-label="Nie">Nie</button>
-					</div>
-				</div>
-			</div>
-		</div>
+		<div id="root"></div>
+		<script type="module" src="/src/main.tsx"></script>
 	</body>
 </html>

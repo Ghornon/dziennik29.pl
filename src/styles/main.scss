@@ -1,27 +1,12 @@
-:root {
-	--paper: #f3e8d1;
-	--ink: #0f1316;
-	--ink-soft: #1c2227;
-	--muted: #6d6b66;
-	--max: 1100px;
-}
-* {
-	box-sizing: border-box;
-}
-html,
+@use './common.scss';
+@use './fonts.scss';
+@use './variables.scss';
+
 body {
-	height: 100%;
-}
-body {
-	margin: 0;
-	background: var(--paper) url('./fon_dzennik.webp') center/cover fixed no-repeat;
+	background: var(--paper) url('../assets/bg.webp') center/cover fixed no-repeat;
 	color: var(--ink);
 	font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Helvetica Neue',
 		Arial, sans-serif;
-}
-a {
-	color: inherit;
-	text-decoration: none;
 }
 .header {
 	position: sticky;
@@ -127,6 +112,17 @@ a {
 .result {
 	letter-spacing: 0.04em;
 }
+
+.result.correct {
+	color: #1a8b11;
+	font-weight: bold;
+}
+
+.result.incorrect {
+	color: #d11a1a;
+	font-weight: bold;
+}
+
 .paddingTop {
 	padding-top: 30px;
 }
@@ -234,6 +230,7 @@ input::-webkit-inner-spin-button {
 }
 
 input[type='number'] {
+	appearance: textfield; /* Standard */
 	-moz-appearance: textfield; /* Firefox */
 }
 
