@@ -45,15 +45,12 @@ const AnswerForm = () => {
 
 	return (
 		<div className="container center">
-			<h1 className="h1" id="title">
-				Odpowiedź do zagadki {currentPage}
-			</h1>
+			<h1 className="h1">Odpowiedź do zagadki {currentPage}</h1>
 
 			<div className="form-wrap">
 				<div className="input-shell">
 					<div className="input-box">
 						<input
-							id="answer"
 							className="input"
 							type="text"
 							placeholder="Wpisz odpowiedź…"

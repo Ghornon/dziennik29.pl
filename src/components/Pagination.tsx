@@ -1,20 +1,16 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import GameContext from '../context/GameContext';
 
-const Pagination = ({
-	total,
-	currentPage,
-	setCurrentPage,
-}: {
-	total: number;
-	currentPage: number;
-	setCurrentPage: (page: number) => void;
-}) => {
+const Pagination = () => {
+	const { totalPages, currentPage, setCurrentPage } = useContext(GameContext);
+
 	const maxPages = 7;
 	let start = Math.max(0, currentPage - Math.floor(maxPages / 2));
 	let end = start + maxPages;
 
-	if (end > total) {
-		end = total;
+	if (end > totalPages) {
+		end = totalPages;
 		start = Math.max(0, end - maxPages);
 	}
 
@@ -55,7 +51,7 @@ const Pagination = ({
 				className="pagination-next"
 				aria-label="Nastepna strona"
 				onClick={() => {
-					if (currentPage < total - 1) setCurrentPage(currentPage + 1);
+					if (currentPage < totalPages - 1) setCurrentPage(currentPage + 1);
 				}}
 			>
 				»

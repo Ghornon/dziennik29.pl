@@ -4,7 +4,7 @@ import Result from './Result';
 
 const Game = () => {
 	return (
-		<main id="top" className="main">
+		<main className="main">
 			<AnswerForm />
 			<Result />
 			<Modal />

@@ -73,10 +73,8 @@ const Modal = () => {
 
 			<div className="modal" style={{ display: open ? 'block' : 'none' }} ref={modalRef}>
 				<div className="modal-content">
-					<div id="modalTitle" className="modal-title">
-						{titleText}
-					</div>
-					<div id="modalBody" className="modal-body">
+					<div className="modal-title">{titleText}</div>
+					<div className="modal-body">
 						<div className="form-wrap">
 							<button className="button" aria-label="Tak" onClick={handleModalYes}>
 								Tak
