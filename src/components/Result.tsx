@@ -13,7 +13,7 @@ const Result = () => {
 	}
 
 	return (
-		<div className="container center">
+		<div className="container">
 			<div className={resultClasses}>{result}</div>
 		</div>
 	);

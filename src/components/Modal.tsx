@@ -52,7 +52,7 @@ const Modal = () => {
 
 	return (
 		<>
-			<div className="container center">
+			<div className="container">
 				<div className="form-wrap">
 					<button
 						className="button"

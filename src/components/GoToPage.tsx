@@ -12,15 +12,16 @@ const GoToPage = () => {
 	}, [currentPage]);
 
 	return (
-		<div className="goToPage">
-			<label htmlFor="goToPageInput" className="goToPageLabel">
+		<div className="goTo">
+			<label htmlFor="goTo-input" className="goToPageLabel">
 				Strona:
 			</label>
 			<input
 				type="number"
 				min="0"
 				max={totalPages - 1}
-				className="goToPageInput"
+				className="goTo-input"
+				id="goTo-input"
 				value={goToPage !== undefined ? goToPage : ''}
 				onChange={(e) => {
 					const value = e.target.value;
@@ -28,7 +29,7 @@ const GoToPage = () => {
 				}}
 			/>
 			<button
-				className="goToPageButton"
+				className="goTo-button"
 				onClick={() => {
 					let val = Number(goToPage);
 					if (!isNaN(val)) {

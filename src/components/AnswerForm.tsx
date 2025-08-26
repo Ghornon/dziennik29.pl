@@ -44,7 +44,7 @@ const AnswerForm = () => {
 	}, [currentPage]);
 
 	return (
-		<div className="container center">
+		<div className="container">
 			<h1 className="h1">Odpowiedź do zagadki {currentPage}</h1>
 
 			<div className="form-wrap">

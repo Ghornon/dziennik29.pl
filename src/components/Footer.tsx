@@ -6,7 +6,6 @@ const Footer = () => {
 		<footer className="bottom-nav">
 			<GoToPage />
 			<Pagination />
-			<div className="pagination"></div>
 		</footer>
 	);
 };
