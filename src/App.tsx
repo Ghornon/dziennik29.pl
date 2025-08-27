@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import Header from './components/Header';
 import GamePage from './pages/GamePage';
 import Rozpadlina from './pages/Rozpadlina';
 import Notes from './pages/Notes';
@@ -7,7 +6,6 @@ import Notes from './pages/Notes';
 function App() {
 	return (
 		<BrowserRouter>
-			<Header />
 			<Routes>
 				<Route path="/">
 					<Route index element={<GamePage />} />

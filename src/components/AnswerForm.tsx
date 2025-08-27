@@ -1,17 +1,11 @@
-import { useCallback, useContext, useEffect, useState } from 'react';
-import GameContext from '../context/GameContext';
-import { reverseAnswer } from '../Helpers/reverse';
+import { useCallback, useEffect, useState } from 'react';
+import { reverseAnswer } from '../Helpers/reverseAnswer';
+import { useGameStore } from '../store/GameStore';
 
 const AnswerForm = () => {
-	const {
-		currentPage,
-		setResult,
-		keys,
-	}: {
-		currentPage: number;
-		setResult: (result: string) => void;
-		keys: { answer: string; key: string }[];
-	} = useContext(GameContext);
+	const currentPage = useGameStore((state) => state.currentPage);
+	const keys = useGameStore((state) => state.keys);
+	const setValue = useGameStore((state) => state.setValue);
 
 	const [answer, setAnswer] = useState('');
 
@@ -20,11 +14,12 @@ const AnswerForm = () => {
 		const key = keys[currentPage]?.key;
 
 		if (answer.trim().toLowerCase() == correctAnswer) {
-			setResult(`Poprawnie! Klucz: ${key}`);
+			setValue('correctAnswer', true);
+			setValue('result', `Poprawnie! Klucz.${currentPage}: ${key}`);
 		} else {
-			setResult('Błędna odpowiedź');
+			setValue('result', 'Błędna odpowiedź');
 		}
-	}, [answer, currentPage, keys, setResult]);
+	}, [answer, currentPage, keys, setValue]);
 
 	useEffect(() => {
 		const listener = (event: { code: string; preventDefault: () => void }) => {
@@ -45,7 +40,7 @@ const AnswerForm = () => {
 
 	return (
 		<div className="container">
-			<h1 className="h1">Odpowiedź do zagadki {currentPage}</h1>
+			<h1 className="h1">Rozwiąż zagadkę {currentPage}:</h1>
 
 			<div className="form-wrap">
 				<div className="input-shell">

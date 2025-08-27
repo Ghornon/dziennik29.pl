@@ -1,9 +1,11 @@
-import { useContext, useEffect, useState } from 'react';
-import GameContext from '../context/GameContext';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
+import { useGameStore } from '../store/GameStore';
 
 const GoToPage = () => {
-	const { totalPages, currentPage, setCurrentPage } = useContext(GameContext);
+	const currentPage = useGameStore((state) => state.currentPage);
+	const totalPages = useGameStore((state) => state.totalPages);
+	const setValue = useGameStore((state) => state.setValue);
 	const [goToPage, setGoToPage] = useState<number | string>();
 	const navigate = useNavigate();
 
@@ -34,7 +36,7 @@ const GoToPage = () => {
 					let val = Number(goToPage);
 					if (!isNaN(val)) {
 						val = Math.max(0, Math.min(val, totalPages - 1));
-						setCurrentPage(val);
+						setValue('currentPage', val);
 						setGoToPage(val);
 						navigate(`/${val}`);
 					}

@@ -1,53 +1,38 @@
 import Game from '../components/Game';
 import Footer from '../components/Footer';
-import { useCallback, useEffect, useState } from 'react';
-import GameContext from '../context/GameContext';
-import { dziennik29Data } from '../data/dziennik29Data.ts';
-import { useLocation } from 'react-router-dom';
+import { useCallback, useEffect } from 'react';
+import dziennik29Data from '../data/dziennik29Data.json';
+import { useParams } from 'react-router-dom';
+import Header from '../components/Header.tsx';
+import { useGameStore, type IKey } from '../store/GameStore.tsx';
 
 const GamePage = () => {
-	const [currentPage, setCurrentPage] = useState(0);
-	const [result, setResult] = useState('');
-	const keys = dziennik29Data.map((item) => ({
-		...item,
-		error: item.error || '',
-	}));
-	const totalPages = keys.length;
-
-	const handlePageChange = (newPage: number) => {
-		setCurrentPage(newPage);
-		setResult('');
-	};
-
-	const location = useLocation();
+	const { pageId } = useParams();
+	const totalPages = useGameStore((state) => state.totalPages);
+	const setValue = useGameStore((state) => state.setValue);
+	const setKeys = useGameStore((state) => state.setKeys);
 
 	const loadPage = useCallback(() => {
-		const pageNumber = Number(location.pathname.replace('/', ''));
-		if (!isNaN(pageNumber) && pageNumber >= 0 && pageNumber < totalPages) {
-			setCurrentPage(pageNumber);
+		const id = Number(pageId);
+
+		if (!isNaN(id) && id >= 0 && id < totalPages) {
+			setValue('currentPage', id);
 		} else {
-			setCurrentPage(0);
+			setValue('currentPage', 0);
 		}
-	}, [location.pathname, totalPages]);
+	}, [pageId, setValue, totalPages]);
 
 	useEffect(() => {
+		setKeys(dziennik29Data as Array<IKey>);
 		loadPage();
-	}, [loadPage]);
+	}, [pageId, loadPage, setKeys]);
 
 	return (
-		<GameContext.Provider
-			value={{
-				currentPage,
-				setCurrentPage: handlePageChange,
-				keys,
-				totalPages,
-				result,
-				setResult,
-			}}
-		>
+		<>
+			<Header />
 			<Game />
 			<Footer />
-		</GameContext.Provider>
+		</>
 	);
 };
 

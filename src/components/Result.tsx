@@ -1,8 +1,10 @@
-import { useContext } from 'react';
-import GameContext from '../context/GameContext';
+import { useEffect } from 'react';
+import { useGameStore } from '../store/GameStore';
 
 const Result = () => {
-	const { result } = useContext(GameContext);
+	const result = useGameStore((state) => state.result);
+	const currentPage = useGameStore((state) => state.currentPage);
+	const setValue = useGameStore((state) => state.setValue);
 
 	let resultClasses = 'result';
 
@@ -11,6 +13,10 @@ const Result = () => {
 	} else if (result.startsWith('Poprawnie!')) {
 		resultClasses = 'result correct';
 	}
+
+	useEffect(() => {
+		setValue('result', '');
+	}, [currentPage, setValue]);
 
 	return (
 		<div className="container">

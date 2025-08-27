@@ -1,6 +1,6 @@
-import { useState, useRef, useEffect, useContext } from 'react';
-import GameContext from '../context/GameContext';
-import { reverseAnswer } from '../Helpers/reverse';
+import { useState, useRef, useEffect } from 'react';
+import { reverseAnswer } from '../Helpers/reverseAnswer';
+import { useGameStore } from '../store/GameStore';
 
 const Modal = () => {
 	const [open, setOpen] = useState(false);
@@ -8,7 +8,9 @@ const Modal = () => {
 	const modalRef = useRef<HTMLDivElement>(null);
 	const [modalType, setModalType] = useState('');
 
-	const { setResult, keys, currentPage } = useContext(GameContext)!;
+	const keys = useGameStore((state) => state.keys);
+	const currentPage = useGameStore((state) => state.currentPage);
+	const setValue = useGameStore((state) => state.setValue);
 
 	const handleModalOpen = (type: string) => {
 		if (type === 'tip') {
@@ -26,11 +28,11 @@ const Modal = () => {
 		setOpen(false);
 		if (modalType === 'tip') {
 			const tip = keys[currentPage]?.tip;
-			setResult(tip);
+			setValue('result', tip);
 		}
 		if (modalType === 'answer') {
 			const answer = reverseAnswer(keys[currentPage]?.answer);
-			setResult(`Odpowiedź: ${answer}`);
+			setValue('result', `Odpowiedź: ${answer}`);
 		}
 	};
 
