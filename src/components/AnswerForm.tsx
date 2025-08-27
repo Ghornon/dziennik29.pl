@@ -15,7 +15,11 @@ const AnswerForm = () => {
 
 		if (answer.trim().toLowerCase() == correctAnswer) {
 			setValue('correctAnswer', true);
-			setValue('result', `Poprawnie!\n{Klucz.${currentPage}}: ${key}`);
+
+			let result = `Poprawnie!`;
+			if (key) result += `\n{Klucz.${currentPage}}: ${key}`;
+
+			setValue('result', result);
 		} else {
 			setValue('result', 'Błędna odpowiedź');
 		}

@@ -28,7 +28,7 @@ const Modal = () => {
 		setOpen(false);
 		if (modalType === 'tip') {
 			const tip = keys[currentPage]?.tip;
-			setValue('result', tip);
+			setValue('result', tip || 'Brak dostępnych podpowiedzi');
 		}
 		if (modalType === 'answer') {
 			const answer = reverseAnswer(keys[currentPage]?.answer);
