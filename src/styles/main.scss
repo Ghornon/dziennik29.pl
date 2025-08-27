@@ -1,0 +1,398 @@
+@use './common.scss';
+@use './fonts.scss';
+@use './variables.scss';
+
+body {
+	background: var(--paper) url('../assets/bg.webp') center/cover fixed no-repeat;
+	color: var(--ink);
+	font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Helvetica Neue',
+		Arial, sans-serif;
+}
+
+.header {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	background: var(--paper);
+	backdrop-filter: blur(6px);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+
+	.nav {
+		height: 64px;
+
+		.brand {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			align-content: center;
+			flex-direction: column;
+			height: 100%;
+
+			img {
+				padding-top: 6px;
+				filter: invert(1);
+			}
+		}
+
+		.line {
+			display: flex;
+			align-items: end;
+			line-height: 1;
+			justify-content: center;
+			padding: 0;
+			margin: 0;
+			height: auto;
+		}
+
+		h2,
+		h3,
+		h4 {
+			font-family: 'EB Garamond', serif;
+			font-optical-sizing: auto;
+			font-weight: 400;
+			font-style: normal;
+			text-transform: uppercase;
+			margin: 0;
+			padding: 0;
+		}
+		.subtitle {
+			letter-spacing: 0.06em;
+		}
+	}
+	&-przebudzenie {
+		background: #fefefe;
+	}
+	&-zapomnienie {
+		background: #c43628;
+	}
+}
+
+.container {
+	width: 100%;
+	max-width: var(--max);
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.main {
+	padding-top: 64px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 16px;
+}
+
+.center {
+	text-align: center;
+}
+
+.h1 {
+	font-family: 'Cormorant Garamond', serif;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	color: var(--ink);
+	line-height: 1;
+	margin: 0;
+	padding: 16px 0;
+	text-wrap: balance;
+	text-align: center;
+}
+
+.form-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 10px;
+	width: 100%;
+}
+
+.input-shell {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	margin: 0 auto;
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.input-box {
+	background: var(--ink);
+	display: flex;
+	align-items: center;
+}
+
+.input {
+	all: unset;
+	color: #e9eef2;
+	letter-spacing: 0.08em;
+	text-align: center;
+	padding: 14px 18px;
+	font-size: 0.875rem;
+	width: 100%;
+}
+
+.sep {
+	width: 1px;
+	height: 28px;
+	background: rgba(255, 255, 255, 0.15);
+}
+
+.go {
+	all: unset;
+	background: var(--ink-soft);
+	color: #fff;
+	padding: 14px 16px;
+	cursor: pointer;
+	font-size: 22px;
+	&:hover {
+		background: #0b0f12;
+	}
+}
+
+.result {
+	text-align: center;
+	letter-spacing: 0.04em;
+	white-space: pre-line;
+
+	&.correct {
+		color: #1a8b11;
+		font-weight: 600;
+	}
+
+	&.incorrect {
+		color: #d11a1a;
+		font-weight: 600;
+	}
+}
+
+.bottom-nav {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	padding: 16px 0;
+	justify-content: center;
+}
+
+.pagination {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	a {
+		color: black;
+		width: 32px;
+		height: 32px;
+		font-size: 0.875rem;
+		text-decoration: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&.active {
+			background: var(--ink-soft);
+			color: white;
+		}
+		&:hover:not(.active) {
+			background: var(--ink);
+			color: white;
+			transition: background-color 0.3s;
+		}
+	}
+}
+
+.button {
+	all: unset;
+	text-decoration: none;
+	transition: background-color 0.3s;
+	transition: box-shadow 0.5s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: var(--ink-soft);
+	color: #fff;
+	padding: 8px 16px;
+	font-size: 0.875rem;
+	cursor: pointer;
+	&:hover:not(.active) {
+		background: var(--ink);
+		box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+	}
+}
+
+.goTo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 12px;
+	font-size: 0.875rem;
+
+	&-button {
+		@extend .button;
+		padding: 0 16px;
+		height: 32px;
+	}
+	&-label {
+		text-align: center;
+		height: 32px;
+		padding: 0;
+		text-align: center;
+	}
+	&-input {
+		all: unset;
+		text-align: center;
+		width: 32px;
+		height: 32px;
+		padding: 0;
+		border: 1px solid var(--ink-soft);
+	}
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+		/* display: none; <- Crashes Chrome on hover */
+		-webkit-appearance: none;
+		margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+	}
+
+	input[type='number'] {
+		appearance: textfield; /* Standard */
+		-moz-appearance: textfield; /* Firefox */
+	}
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 11;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4);
+	-webkit-animation-name: fadeIn;
+	-webkit-animation-duration: 0.4s;
+	animation-name: fadeIn;
+	animation-duration: 0.4s;
+	&-content {
+		position: fixed;
+		bottom: 0;
+		background: var(--paper);
+		backdrop-filter: blur(6px);
+		border-top: 1px solid rgba(0, 0, 0, 0.08);
+		width: 100%;
+		-webkit-animation-name: slideIn;
+		-webkit-animation-duration: 0.4s;
+		animation-name: slideIn;
+		animation-duration: 0.4s;
+		text-align: center;
+		padding: 20px;
+	}
+	&-title {
+		margin: 0;
+		font-size: 1.4rem;
+		font-weight: 700;
+		font-family: 'Cormorant Garamond', serif;
+		color: var(--ink);
+		padding-bottom: 20px;
+	}
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+	from {
+		bottom: -300px;
+		opacity: 0;
+	}
+	to {
+		bottom: 0;
+		opacity: 1;
+	}
+}
+
+@keyframes slideIn {
+	from {
+		bottom: -300px;
+		opacity: 0;
+	}
+	to {
+		bottom: 0;
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@media (min-width: 600px) {
+	.main {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding-bottom: 126px;
+	}
+
+	.h1 {
+		font-size: 2.75rem;
+	}
+	.input {
+		// width: min(360px, 70vw);
+		font-size: 1rem;
+	}
+
+	.modal-content {
+		padding: 60px 50px;
+	}
+
+	.pagination a {
+		width: 40px;
+		height: 40px;
+		font-size: 1rem;
+		line-height: 40px;
+	}
+
+	.button {
+		padding: 12px 16px;
+		font-size: 1rem;
+	}
+
+	.goTo {
+		font-size: 1rem;
+		&-input {
+			width: 40px;
+			height: 40px;
+		}
+		&-button {
+			padding: 0 16px;
+			height: 40px;
+		}
+	}
+}
+
+@media (max-width: 600px) and (max-height: 667px) {
+	.bottom-nav {
+		position: relative;
+	}
+}
