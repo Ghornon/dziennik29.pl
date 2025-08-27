@@ -1,0 +1,9 @@
+version: '3.9'
+services:
+    jekyll:
+        image: jekyll/jekyll:pages
+        command: sh -c "gem install webrick && jekyll serve --source /usr/src/app/"
+        ports:
+            - '4000:4000'
+        volumes:
+            - ./dist:/usr/src/app/dziennik29.pl/
