@@ -15,7 +15,7 @@ const AnswerForm = () => {
 
 		if (answer.trim().toLowerCase() == correctAnswer) {
 			setValue('correctAnswer', true);
-			setValue('result', `Poprawnie! Klucz.${currentPage}: ${key}`);
+			setValue('result', `Poprawnie!\n{Klucz.${currentPage}}: ${key}`);
 		} else {
 			setValue('result', 'Błędna odpowiedź');
 		}
@@ -40,7 +40,7 @@ const AnswerForm = () => {
 
 	return (
 		<div className="container">
-			<h1 className="h1">Rozwiąż zagadkę {currentPage}:</h1>
+			<h1 className="h1">Rozwiąż zagadkę {currentPage}</h1>
 
 			<div className="form-wrap">
 				<div className="input-shell">

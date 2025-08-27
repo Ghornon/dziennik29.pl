@@ -20,28 +20,62 @@ body {
 	align-items: center;
 	justify-content: center;
 	align-content: center;
+
+	.nav {
+		height: 64px;
+
+		.brand {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			align-content: center;
+			flex-direction: column;
+			height: 100%;
+
+			img {
+				padding-top: 6px;
+				filter: invert(1);
+			}
+		}
+
+		.line {
+			display: flex;
+			align-items: end;
+			line-height: 1;
+			justify-content: center;
+			padding: 0;
+			margin: 0;
+			height: auto;
+		}
+
+		h2,
+		h3,
+		h4 {
+			font-family: 'EB Garamond', serif;
+			font-optical-sizing: auto;
+			font-weight: 400;
+			font-style: normal;
+			text-transform: uppercase;
+			margin: 0;
+			padding: 0;
+		}
+		.subtitle {
+			letter-spacing: 0.06em;
+		}
+	}
+	&-przebudzenie {
+		background: #fefefe;
+	}
+	&-zapomnienie {
+		background: #c43628;
+	}
 }
+
 .container {
 	width: 100%;
 	max-width: var(--max);
 	margin: 0 auto;
 	padding: 0 20px;
-}
-.nav {
-	height: 64px;
-
-	.brand {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		align-content: center;
-		height: 100%;
-
-		img {
-			padding-top: 6px;
-			filter: invert(1);
-		}
-	}
 }
 
 .main {
@@ -61,6 +95,7 @@ body {
 	font-family: 'Cormorant Garamond', serif;
 	font-weight: 700;
 	letter-spacing: 0.04em;
+	color: var(--ink);
 	line-height: 1;
 	margin: 0;
 	padding: 16px 0;
@@ -123,15 +158,16 @@ body {
 .result {
 	text-align: center;
 	letter-spacing: 0.04em;
+	white-space: pre-line;
 
 	&.correct {
 		color: #1a8b11;
-		font-weight: bold;
+		font-weight: 600;
 	}
 
 	&.incorrect {
 		color: #d11a1a;
-		font-weight: bold;
+		font-weight: 600;
 	}
 }
 
