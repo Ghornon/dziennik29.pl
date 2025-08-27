@@ -7,9 +7,9 @@ function App() {
 	// Implementation for gh-pages
 	// <HashRouter basename={import.meta.env.DEV ? '/' : '/dziennik29.pl/'}>
 	return (
-		<HashRouter basename={import.meta.env.DEV ? '/' : '/dziennik29.pl/'}>
+		<HashRouter>
 			<Routes>
-				<Route path="/">
+				<Route>
 					<Route index element={<GamePage />} />
 					<Route path="/rozpadlina" element={<Rozpadlina />} />
 					<Route path="/notes" element={<Notes />} />
