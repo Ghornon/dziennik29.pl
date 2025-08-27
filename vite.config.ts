@@ -2,7 +2,15 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 // https://vite.dev/config/
-export default defineConfig({
-	plugins: [react()],
-	base: '/dziennik29.pl/',
+export default defineConfig(({ command }) => {
+	const config = {
+		plugins: [react()],
+		base: '/',
+	};
+
+	if (command !== 'serve') {
+		config.base = '/dziennik29.pl/';
+	}
+
+	return config;
 });

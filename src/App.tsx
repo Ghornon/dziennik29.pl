@@ -1,11 +1,13 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate, HashRouter } from 'react-router-dom';
 import GamePage from './pages/GamePage';
 import Rozpadlina from './pages/Rozpadlina';
 import Notes from './pages/Notes';
 
 function App() {
+	// Implementation for gh-pages
+	// <HashRouter basename={import.meta.env.DEV ? '/' : '/dziennik29.pl/'}>
 	return (
-		<BrowserRouter>
+		<HashRouter basename={import.meta.env.DEV ? '/' : '/dziennik29.pl/'}>
 			<Routes>
 				<Route path="/">
 					<Route index element={<GamePage />} />
@@ -16,7 +18,7 @@ function App() {
 					<Route path="*" element={<Navigate to="/" replace />} />
 				</Route>
 			</Routes>
-		</BrowserRouter>
+		</HashRouter>
 	);
 }
 
