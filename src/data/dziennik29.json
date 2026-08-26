@@ -1,7 +1,7 @@
 [
 	{
 		"answer": "92",
-		"key": "brawo",
+		"key": "Brawo!",
 		"tip": "To powinno być proste, matematyczne zadanie.",
 		"answerDescription": "Dodanie dwóch liczb da rozwiązanie."
 	},
@@ -175,7 +175,7 @@
 	},
 	{
 		"answer": "82188",
-		"key": "PROM",
+		"key": "prom",
 		"tip": "Każda rzecz rzuca cień, gdy na nią poświecić.",
 		"answerDescription": "Należy przyłożyć ołówek we wskazanym miejscu. Światło (na przykład z latarki w komórce) świecące ze wskazanych miejsc spowoduje, że ołówek rzuci cień na kolejne liczby."
 	},
@@ -337,7 +337,7 @@
 	},
 	{
 		"answer": "nelt",
-		"key": "oni nas widzą",
+		"key": "Oni nas widzą...",
 		"tip": "Najpierw fizyka, potem chemia.",
 		"answerDescription": "Pod wpływem ciepła lód roztapia się, tworząc wodę. Gdy z wody zostanie usunięty wodór, otrzymuje się tlen."
 	},
@@ -379,7 +379,7 @@
 	},
 	{
 		"answer": "ym ot ino",
-		"key": "",
+		"key": "Gratulacje!",
 		"tip": "Tylko niektóre litery warto czytać.",
 		"answerDescription": "Po wypisaniu kluczy oznaczone ciemnymi symbolami litery utworzą rozwiązanie."
 	}
