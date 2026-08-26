@@ -2,10 +2,12 @@ import { create } from 'zustand';
 import { immer } from 'zustand/middleware/immer';
 import { devtools } from 'zustand/middleware';
 
+export type Answer = string | string[] | { from: number; to: number };
+
 export interface IKey {
-	answer: string;
+	answer: Answer;
 	key: string;
-	tip: string;
+	tip?: string;
 	error?: string;
 }
 

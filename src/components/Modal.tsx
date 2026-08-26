@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { reverseAnswer } from '../Helpers/reverseAnswer';
+import { formatAnswer } from '../Helpers/answer';
 import { useGameStore } from '../store/GameStore';
 
 const Modal = () => {
@@ -31,7 +31,7 @@ const Modal = () => {
 			setValue('result', tip || 'Brak dostępnych podpowiedzi');
 		}
 		if (modalType === 'answer') {
-			const answer = reverseAnswer(keys[currentPage]?.answer);
+			const answer = formatAnswer(keys[currentPage]?.answer);
 			setValue('result', `Odpowiedź: ${answer}`);
 		}
 	};

@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { reverseAnswer } from '../Helpers/reverseAnswer';
+import { isAnswerCorrect } from '../Helpers/answer';
 import { useGameStore } from '../store/GameStore';
 
 const AnswerForm = () => {
@@ -10,10 +10,9 @@ const AnswerForm = () => {
 	const [answer, setAnswer] = useState('');
 
 	const checkAnswer = useCallback(() => {
-		const correctAnswer = reverseAnswer(keys[currentPage]?.answer);
 		const key = keys[currentPage]?.key;
 
-		if (answer.trim().toLowerCase() == correctAnswer.toLowerCase()) {
+		if (isAnswerCorrect(keys[currentPage]?.answer, answer)) {
 			setValue('correctAnswer', true);
 
 			let result = `Poprawnie!`;
