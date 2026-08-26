@@ -4,7 +4,7 @@ type Range = { from: number; to: number };
 
 const reverseAnswer = (str: string) => str.split('').reverse().join('');
 
-const isRange = (answer: Answer): answer is Range =>
+const isNumberRange = (answer: Answer): answer is Range =>
 	typeof answer === 'object' && 'from' in answer;
 
 const isAnswerCorrect = (answer: Answer | undefined, guess: string): boolean => {
@@ -12,7 +12,7 @@ const isAnswerCorrect = (answer: Answer | undefined, guess: string): boolean => 
 
 	const normalized = guess.trim().toLowerCase();
 
-	if (isRange(answer)) {
+	if (isNumberRange(answer)) {
 		const num = Number(normalized);
 		return Number.isFinite(num) && num >= answer.from && num <= answer.to;
 	}
@@ -29,7 +29,7 @@ const isAnswerCorrect = (answer: Answer | undefined, guess: string): boolean => 
 const formatAnswer = (answer: Answer | undefined): string => {
 	if (answer == null) return '';
 
-	if (isRange(answer)) {
+	if (isNumberRange(answer)) {
 		return `dowolna liczba z zakresu ${answer.from}–${answer.to}`;
 	}
 

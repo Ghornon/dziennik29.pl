@@ -150,7 +150,7 @@
 		"answerDescription": "Na stronie narysowane są połowy liter. Po przyłożeniu prawej krawędzi książki do lustra można odczytać rozwiązanie."
 	},
 	{
-		"answer": "461,01",
+		"answer": ["461,01", "461.01"],
 		"key": "siedem",
 		"tip": "Nie zaokrąglaj żadnej z tych trzech liczb.",
 		"answerDescription": "Gdy klucze zostaną wpisane w pola, zaznaczone pola wskażą nazwy trzech liczb: stałej matematycznej, stosunku podziału oraz zwykłej liczby. Po wpisaniu tych liczb w pola na dole i obliczeniu ich iloczynu uzyskuje się rozwiązanie."

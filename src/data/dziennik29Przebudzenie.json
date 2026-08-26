@@ -54,6 +54,6 @@
 	{ "answer": "wórazc aniark", "key": "wolfram" },
 	{ "answer": "naicśezs", "key": "fosfor" },
 	{ "answer": "8732", "key": "avena" },
-	{ "answer": "411111296796", "key": "lughole" },
+	{ "answer": ["411 111 29 67 96", "411111296796"], "key": "lughole" },
 	{ "answer": "9164 783 52583", "key": "" }
 ]
