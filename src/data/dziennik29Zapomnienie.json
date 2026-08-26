@@ -11,7 +11,7 @@
 	{ "answer": "enad", "key": "chemia" },
 	{ "answer": "anarbmem", "key": "siedem" },
 	{ "answer": "tal ots", "key": "klasyk" },
-	{ "answer": { "from": 3646, "to": 3946 }, "key": "piątka" },
+	{ "answer": { "range": "6493..6463" }, "key": "piątka" },
 	{ "answer": "31", "key": "1000" },
 	{ "answer": "43573", "key": "kros" },
 	{ "answer": "5233", "key": "królik" },
