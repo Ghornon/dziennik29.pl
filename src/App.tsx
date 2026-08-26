@@ -1,22 +1,38 @@
-import { Routes, Route, Navigate, HashRouter } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 import GamePage from './pages/GamePage';
-import Rozpadlina from './pages/Rozpadlina';
+import NotFound from './pages/NotFound';
 import Notes from './pages/Notes';
+import Mirror from './components/Mirror';
+import Video from './components/Video';
 
 function App() {
-	// Implementation for gh-pages
-	// <HashRouter basename={import.meta.env.DEV ? '/' : '/dziennik29.pl/'}>
 	return (
 		<HashRouter>
 			<Routes>
-				<Route>
-					<Route index element={<GamePage />} />
-					<Route path="/rozpadlina" element={<Rozpadlina />} />
-					<Route path="/notes" element={<Notes />} />
-					<Route path="/notatki" element={<Notes />} />
-					<Route path="/:pageId" element={<GamePage />} />
-					<Route path="*" element={<Navigate to="/" replace />} />
-				</Route>
+				{/* Game */}
+				<Route index element={<GamePage />} />
+				<Route path="/:pageId" element={<GamePage />} />
+
+				{/* Static */}
+				<Route path="/notes"   element={<Notes />} />
+				<Route path="/notatki" element={<Notes />} />
+
+				{/* YouTube */}
+				<Route path="/rozpadlina" element={<Video videoId="qmbigyIDKYI" />} />
+
+				{/* Mirrors */}
+				<Route path="/kamienie" element={<Mirror path="stones"    />} />
+				<Route path="/klan"     element={<Mirror path="cloud"     />} />
+				<Route path="/cisza"    element={<Mirror path="silence"   />} />
+				<Route path="/klasyk"   element={<Mirror path="cave"      />} />
+				<Route path="/machina"  element={<Mirror path="apparatus" />} />
+				<Route path="/zapalone" element={<Mirror path="lightson"  />} />
+				<Route path="/zgaszone" element={<Mirror path="lightsoff" />} />
+				<Route path="/dial"     element={<Mirror path="dial"      />} />
+				<Route path="/patrz"    element={<Mirror path="watch"     />} />
+				<Route path="/granit"   element={<Mirror path="undergo"   />} />
+
+				<Route path="*" element={<NotFound />} />
 			</Routes>
 		</HashRouter>
 	);

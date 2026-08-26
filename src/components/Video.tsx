@@ -1,18 +1,20 @@
-const Rozpadlina = () => {
+interface VideoProps {
+	videoId: string;
+}
+
+const Video = ({ videoId }: VideoProps) => {
 	return (
-		<div className="container center">
+		<div className="youtube-full-page">
 			<iframe
-				width="560"
-				height="315"
-				src="https://www.youtube.com/embed/qmbigyIDKYI?si=W5PyBzpZ0Z80pQtK"
+				src={`https://www.youtube.com/embed/${videoId}`}
 				title="YouTube video player"
 				frameBorder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 				referrerPolicy="strict-origin-when-cross-origin"
 				allowFullScreen
-			></iframe>
+			/>
 		</div>
 	);
 };
 
-export default Rozpadlina;
+export default Video;
