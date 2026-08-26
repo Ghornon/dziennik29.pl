@@ -2,7 +2,8 @@ import { Routes, Route, HashRouter } from 'react-router-dom';
 import GamePage from './pages/GamePage';
 import NotFound from './pages/NotFound';
 import Notes from './pages/Notes';
-import Mirror from './components/Mirror';
+import Mirror from './pages/Mirror';
+import Machina from './pages/Machina';
 
 function App() {
 	return (
@@ -15,6 +16,7 @@ function App() {
 				{/* Static */}
 				<Route path="/notes"    element={<Notes />} />
 				<Route path="/notatki"  element={<Notes />} />
+				<Route path="/machina"  element={<Machina />} />
 
 				{/* Mirrors */}
 				<Route path="/rozpadlina"  element={<Mirror path="wormroot"   />} />
@@ -24,7 +26,6 @@ function App() {
 				<Route path="/klan"        element={<Mirror path="cloud"      />} />
 				<Route path="/cisza"       element={<Mirror path="silence"    />} />
 				<Route path="/klasyk"      element={<Mirror path="cave"       />} />
-				<Route path="/machina"     element={<Mirror path="apparatus"  />} />
 				<Route path="/zapalone"    element={<Mirror path="lightson"   />} />
 				<Route path="/zgaszone"    element={<Mirror path="lightsoff"  />} />
 				<Route path="/dial"        element={<Mirror path="dial"       />} />
