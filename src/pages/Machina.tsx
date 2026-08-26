@@ -35,6 +35,7 @@ const Machina = () => {
             onChange={e => setInput(e.target.value)}
             maxLength={20}
             autoFocus
+            spellCheck={false}
           />
         </div>
         <div className="machina-group">
