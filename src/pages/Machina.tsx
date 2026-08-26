@@ -9,15 +9,15 @@ const replaceValues: Record<string, string> = {
   'z': '丂', '1': '⋉', '2': '⟒', '3': '⊑', '4': '⎒',
   '5': '⌿', '6': '⎅', '7': '⏁', '8': '⏋', '9': '⍾',
   '0': '⎍',
+  'ą': '⍚', 'ć': '⌾', 'ę': '⎊', 'ł': '⩞',
+  'ń': '⍝', 'ó': '⌻', 'ś': '⎋', 'ź': '⌺', 'ż': '⍨',
 };
 
-function translate(input: string): string {
-  let result = input;
-  for (const [key, val] of Object.entries(replaceValues)) {
-    result = result.replace(new RegExp(key, 'gim'), val);
-  }
-  return result;
-}
+const translate = (input: string) =>
+  Object.entries(replaceValues).reduce(
+    (s, [k, v]) => s.replace(new RegExp(k, 'gim'), v),
+    input
+  );
 
 const Machina = () => {
   const [input, setInput] = useState('');
@@ -25,29 +25,27 @@ const Machina = () => {
   return (
     <div className="machina">
       <div className="machina-screen">
-        <div className="machina-col">
-          <div className="machina-group">
-            <label className="machina-label" htmlFor="machina-input">Insert Text:</label>
-            <input
-              id="machina-input"
-              type="text"
-              className="machina-field"
-              value={input}
-              onChange={e => setInput(e.target.value)}
-              maxLength={20}
-              autoFocus
-            />
-          </div>
-          <div className="machina-group">
-            <label className="machina-label" htmlFor="machina-output">Output:</label>
-            <textarea
-              id="machina-output"
-              className="machina-field"
-              readOnly
-              rows={1}
-              value={translate(input)}
-            />
-          </div>
+        <div className="machina-group">
+          <label htmlFor="machina-input">Insert Text:</label>
+          <input
+            id="machina-input"
+            type="text"
+            className="machina-field"
+            value={input}
+            onChange={e => setInput(e.target.value)}
+            maxLength={20}
+            autoFocus
+          />
+        </div>
+        <div className="machina-group">
+          <label htmlFor="machina-output">Output:</label>
+          <textarea
+            id="machina-output"
+            className="machina-field"
+            readOnly
+            rows={1}
+            value={translate(input)}
+          />
         </div>
       </div>
       <div className="machina-scanlines" />
