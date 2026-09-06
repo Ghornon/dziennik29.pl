@@ -220,7 +220,7 @@
 		"answer": "033",
 		"key": "szerokość",
 		"tips": [
-			"Użyłeś już linijki? Jesteś w połowie drogi. Pamiętaj jednak, że rzeczywisty posąg jest większy niż ten na obrazku.",
+			"Linijka już w ruch? Świetnie, jesteś w połowie drogi! Pamiętaj jednak, że rzeczywisty posąg jest większy niż ten na obrazku.",
 			"Poszukaj obiektów, które pomogą Ci określić skalę."
 		]
 	},
@@ -245,7 +245,7 @@
 		"id": "92",
 		"answer": "mutnauq",
 		"key": "żółty",
-		"d29answer":"tnakw",
+		"d29answer": "tnakw",
 		"tips": [
 			"Błądzenie po labiryncie po omacku do niczego nie prowadzi. Najlepiej zrobisz, rozrysowując mapę.",
 			"Skoro błądzisz po omacku, zaufaj dotykowi. Kto wie, może te stare ściany mają drugie dno?"
@@ -256,7 +256,7 @@
 		"answer": "arksi",
 		"key": "czerwona",
 		"tips": [
-			"Nie komplikuj tego. Dostałeś wszystko, co jest ci potrzebne."
+			"Nie komplikuj tego. Masz już wszystko, czego potrzebujesz."
 		]
 	},
 	{
@@ -380,7 +380,7 @@
 		"answer": "7971",
 		"key": "ameryk",
 		"tips": [
-			"Pierwszy obrazek wskaże ci miasto, a drugi doprowadzi do konkretnego miejsca w nim. Prosta matematyka. Zostaje tylko klucz, który odkryje przed tobą wydarzenie z tamtych lat.",
+			"Pierwszy obrazek wskaże Ci miasto, a drugi doprowadzi do konkretnego miejsca w nim. Prosta matematyka. Zostaje tylko klucz, który odkryje przed Tobą wydarzenie z tamtych lat.",
 			"Potrzebujesz tylko roku."
 		]
 	},
@@ -469,10 +469,7 @@
 	},
 	{
 		"id": "119",
-		"answer": [
-			"411 111 29 67 96",
-			"411111296796"
-		],
+		"answer": ["411 111 29 67 96", "411111296796"],
 		"key": "lughole",
 		"tips": [
 			"Pisanie tych wszystkich nazw zajmuje tyle czasu... Gdyby tak miały prostsze, krótsze oznaczenia.",

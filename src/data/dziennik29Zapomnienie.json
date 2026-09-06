@@ -1,5 +1,5 @@
 [
-		{
+	{
 		"id": "xxx",
 		"answer": "92",
 		"key": "nowe wspomnienie",
@@ -11,73 +11,103 @@
 		"id": "121",
 		"answer": "9831",
 		"key": "cztery",
-		"tips": []
+		"tips": [
+			"To nie wygląda jak słowa..."
+		]
 	},
 	{
 		"id": "122",
 		"answer": "GEIB",
 		"key": "dwa",
-		"tips": []
+		"tips": [
+			"Pełen bałagan: gdzie tu litery, gdzie cyfry, gdzie góra, a gdzie dół? Wszystko stoi na głowie!",
+			"Weź obróć książkę do góry nogami i rozwiązuj."
+		]
 	},
 	{
 		"id": "123",
 		"answer": "7536",
 		"key": "klan",
-		"tips": []
+		"tips": [
+			"Tutaj musi być jakieś wyjście."
+		]
 	},
 	{
 		"id": "124",
 		"answer": "061",
 		"key": "spec",
-		"tips": []
+		"tips": [
+			"Po prostu uważnie to przelicz."
+		]
 	},
 	{
 		"id": "125",
 		"answer": "kęj",
 		"key": "wilk",
-		"tips": []
+		"tips": [
+			"Czas zagrać w bingo z tymi literami.",
+			"Tego, czego szukasz, nie ma w tych zdaniach."
+		]
 	},
 	{
 		"id": "126",
-		"answer": "yzrt",
+		"answer": ["yzrt", "3"],
 		"key": "mops",
-		"tips": []
+		"tips": [
+			"ASCII"
+		]
 	},
 	{
 		"id": "127",
 		"answer": "ycbo",
 		"key": "kamienie",
-		"tips": []
+		"tips": [
+			"Licz tylko to, co wyjątkowe."
+		]
 	},
 	{
 		"id": "128",
 		"answer": "jam",
 		"key": "cisza",
-		"tips": []
+		"tips": [
+			"Ten obiekt nie mówi w Twoim języku, ale zostawił Ci instrukcję. Przestań kręcić nim na oślep - klucz do właściwego rytmu jest zapisany tam, gdzie rzadko zaglądasz.",
+			"Nie wszystko, co na marginesie, jest nieważne. Warto czasem opuścić wzrok i znaleźć ten jeden mały wyjątek od reguły."
+		]
 	},
 	{
 		"id": "129",
 		"answer": "161",
 		"key": "względność",
-		"tips": []
+		"tips": [
+			"Łatwo rozwiążesz tę zagadkę, jeśli chemia w szkole była Twoją mocną stroną.",
+			"Ale we włoskich szkołach ta wskazówka nie byłaby nikomu potrzebna."
+		]
 	},
 	{
 		"id": "130",
 		"answer": "enad",
 		"key": "chemia",
-		"tips": []
+		"tips": [
+			"Te liczby to nie kod do wpisania, lecz instrukcja ruchu. Każda para określa początek i koniec drogi, która układa się w konkretny kształt."
+		]
 	},
 	{
 		"id": "131",
 		"answer": "anarbmem",
 		"key": "siedem",
-		"tips": []
+		"tips": [
+			"Do zwycięstwa zostało tylko kilka kroków.",
+			"Kapitanie, czekamy na współrzędne celu."
+		]
 	},
 	{
 		"id": "132",
-		"answer": "tal ots",
+		"answer": ["tal ots", "tal 001"],
 		"key": "klasyk",
-		"tips": []
+		"tips": [
+			"Ta machina ma przecież instrukcję. Teraz muszę tylko odnaleźć nuty.",
+			"Nie sądzę, żeby to był tekst piosenki do melodii, którą trzeba zagrać. Po co w ogóle jest tu tyle cyfr? Może mam jeszcze wpisać cyfry w odpowiedzi?"
+		]
 	},
 	{
 		"id": "133",
@@ -86,174 +116,238 @@
 			"customValidator": "puzzle133"
 		},
 		"key": "piątka",
-		"tips": []
+		"tips": [
+			"Może to ma jakiś związek z poprzednią zagadką?",
+			"Może masz wątpliwości i myślisz, że nic o Tobie nie wiemy? Myślisz, że to tylko gra? Wiemy o Tobie wszystko!"
+		]
 	},
 	{
 		"id": "134",
 		"answer": "31",
 		"key": "1000",
-		"tips": []
+		"tips": [
+			"To wygląda jak tajny raport wywiadu. Tylko dlaczego mam to dziwne, dręczące przeczucie, że ta informacja przez cały czas była gdzieś blisko, w zasięgu ręki?"
+		]
 	},
 	{
 		"id": "135",
 		"answer": "43573",
 		"key": "kros",
-		"tips": []
+		"tips": [
+			"Monotonia usypia czujność. To, co wygląda jak bezużyteczna tapeta, kryje w sobie kilka wyjątków od reguły."
+		]
 	},
 	{
 		"id": "136",
 		"answer": "5233",
 		"key": "królik",
-		"tips": []
+		"tips": [
+			"Szukasz odpowiedzi z daleka? Błąd. Podejdź tak blisko, żeby niemal wsadzić nos w tę tajemnicę."
+		]
 	},
 	{
 		"id": "137",
 		"answer": "katp",
 		"key": "machina",
-		"tips": []
+		"tips": [
+			"Z rebusu dostaniesz tylko sam fant. Właściwa odpowiedź czeka już w środku."
+		]
 	},
 	{
 		"id": "138",
 		"answer": "naryt",
 		"key": "ślina",
-		"tips": []
+		"tips": [
+			"W tym miejscu moje wskazówki na nic się nie zdadzą. Patrz pod nogi - tam leży Twój nowy punkt odniesienia."
+		]
 	},
 	{
 		"id": "139",
 		"answer": "amzyrahc",
 		"key": "utarg",
-		"tips": []
+		"tips": [
+			"Przyjrzyj się uważnie, być może zobaczysz coś więcej niż tylko cyfry."
+		]
 	},
 	{
 		"id": "140",
 		"answer": "6211",
 		"key": "fort",
-		"tips": []
+		"tips": [
+			"Powąchaj świnkę! (^(oo)^) Słowo daję, ryba pachnie dokładnie tak samo.",
+			"Potrzebne jest to, co przed momentem zostało powąchane."
+		]
 	},
 	{
 		"id": "141",
 		"answer": "613468641",
 		"key": "pierwsze",
-		"tips": []
+		"tips": [
+			"Plan wymaga precyzji. Nie zgub żadnej cyfry, nawet gdy przecinasz tę ścianę drugi raz."
+		]
 	},
 	{
 		"id": "142",
 		"answer": "noip",
 		"key": "następna",
-		"tips": []
+		"tips": [
+			"Kto to ukrył się w ciemności? Musisz podświetlić korytarz z jednej ze stron.",
+			"W mroku korytarza czai się obcy - to Twój pierwszy przewodnik. On wskaże Ci drogę do kogoś, kto pochodzi z tego miejsca. Jego imię jest tym, czego szukasz."
+		]
 	},
 	{
 		"id": "143",
 		"answer": "lec",
 		"key": "nobel",
-		"tips": []
+		"tips": [
+			"Odeszli już wiele lat temu, ale ich imiona wciąż żyją i pomagają ludzkości. Dziś nazwisko pierwszego z nich doprowadzi Cię do tego drugiego, a spuścizna tego drugiego naprowadzi Cię na odpowiedź."
+		]
 	},
 	{
 		"id": "144",
 		"answer": "koms",
 		"key": "wodospad",
-		"tips": []
+		"tips": [
+			"Liczba jako zwierzę? Kto to w ogóle wymyślił i w jakiej części świata?",
+			"Ta tradycja przyszła z daleka, ale dziś nikogo już nie dziwi, że te liczby mają swoich zwierzęcych patronów. Pod jakim znakiem upłynął tamten czas?"
+		]
 	},
 	{
 		"id": "145",
 		"answer": "450",
 		"key": "2000",
-		"tips": []
+		"tips": [
+			"Ona wskaże, czego i gdzie szukać. Podążaj za tym śladem, a doprowadzi Cię prosto do odpowiedzi."
+		]
 	},
 	{
 		"id": "146",
 		"answer": "kos",
 		"key": "zapal",
-		"tips": []
+		"tips": [
+			"Okej, to jasne, że te runy stosujemy do słów. To w pewnym sensie funkcje. Ale co, u licha, oznaczają te cyfry? Jaki jest ich cel?",
+			"Runa to odpowiedź na pytanie „co robić”, ale to cyfra decyduje, ile razy masz to powtórzyć."
+		]
 	},
 	{
 		"id": "147",
 		"answer": "ceżorondej",
 		"key": "publikacja",
-		"tips": []
+		"tips": [
+			"Ten chaos punktów ma swój ukryty porządek. Użyj klucza jako filtra - on wyciągnie na wierzch tylko te, które tworzą rozwiązanie."
+		]
 	},
 	{
 		"id": "148",
 		"answer": "ozależ",
 		"key": "1982",
-		"tips": []
+		"tips": [
+			"Nieważne, jaki kolor wybrali, nie mają szans się przed Tobą schować. Czas zepsuć im tę zabawę w chowanego."
+		]
 	},
 	{
 		"id": "149",
 		"answer": "onreb",
 		"key": "argon",
-		"tips": []
+		"tips": [
+			"Te barwy nie należą do żadnego państwa na mapie. Zostaw politykę i spójrz na to z mostka kapitańskiego - statki od wieków rozmawiają tym kodem.",
+			"Chwila, ale jedna flaga jest tutaj obca. Być może to właśnie w niej kryje się odpowiedź?"
+		]
 	},
 	{
 		"id": "150",
 		"answer": "ulka",
 		"key": "purchase",
-		"tips": []
+		"tips": [
+			"Wygląda jak zwyczajny rebus, ale bez googlowania się nie obejdzie. Pora odpalić internet.",
+			"{Imię i nazwisko} minus {klucz}"
+		]
 	},
 	{
 		"id": "151",
 		"answer": "pots",
 		"key": "one",
-		"tips": []
+		"tips": [
+			"Zęby"
+		]
 	},
 	{
 		"id": "152",
 		"answer": "888",
 		"key": "dial",
 		"d29key": "wybierz",
-		"tips": []
+		"tips": [
+			"Wystarczy to trochę przekręcić, żeby zobaczyć, gdzie dokładnie kryje się właściwa odpowiedź."
+		]
 	},
 	{
 		"id": "153",
 		"answer": "127945",
 		"key": "patrz",
-		"tips": []
+		"tips": [
+			"Na dnie sześcianu znajdziesz instrukcję.",
+			"Masz już na koncie działanie zupełnie odwrotne. Wykonanie tego, o co prosi instrukcja, to przecież żaden problem."
+		]
 	},
 	{
 		"id": "154",
-		"answer": "823",
+		"answer": "9491",
 		"key": "lipa",
-		"tips": []
+		"tips": [
+			"Pierwsza część to coś, co odcisnęło trwałe piętno na światowej kulturze."
+		]
 	},
 	{
 		"id": "155",
 		"answer": "noitpeced",
 		"key": "gra",
 		"d29answer": "owtsuzso",
-		"tips": []
+		"tips": [
+			"Kiedyś ludzie potrafili pisać całe słowa za pomocą tych klawiszy. Pamiętasz jeszcze czasy przed smartfonami?"
+		]
 	},
 	{
 		"id": "156",
 		"answer": "soahc",
 		"key": "góra",
-		"tips": []
+		"tips": [
+			"Ten adres jest całkowicie prawdziwy. Wystarczy go tylko wygooglować.",
+			"Przybliż mapę, być może to ujawni więcej szczegółów.",
+			"O co chodzi z tymi wszystkimi wskazówkami? Szukamy czegoś, bez czego nie da się dostrzec odpowiedzi? Moglibyśmy przecież zastąpić ten przedmiot, gdybyśmy tylko zrozumieli, do czego tak naprawdę służy."
+		]
 	},
 	{
 		"id": "157",
-		"answer": [
-			"medeis",
-			"7"
-		],
+		"answer": ["medeis", "7"],
 		"key": "dolina",
-		"tips": []
+		"tips": [
+			"Czego brakuje?"
+		]
 	},
 	{
 		"id": "158",
 		"answer": "45325",
 		"key": "nit",
-		"tips": []
+		"tips": [
+			"Kierunek podpowiedzą Ci klucze.",
+			"Treść słów nie ma tu żadnego znaczenia, potrzebujesz tylko ich drobnych elementów."
+		]
 	},
 	{
 		"id": "159",
 		"answer": "mad",
 		"key": "ulicznik",
-		"tips": []
+		"tips": [
+			"Przyjrzyj się uważnie - ogniwa tych łańcuchów nie są przecież takie same."
+		]
 	},
 	{
 		"id": "160",
 		"answer": "einatiwś",
 		"key": "",
 		"specialResult": "d29-3-finale",
-		"tips": []
+		"tips": [
+			"Trzeba było zdobyć całe mnóstwo kluczy, żeby otworzyć tę stronę. Nie zatrzymuj się teraz, zrób ten ostatni krok. Dosłownie brakuje Ci jeszcze jednego klucza!"
+		]
 	}
 ]
